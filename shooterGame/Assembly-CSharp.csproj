@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\Geschoss.cs" />
      <Compile Include="Assets\Scripts\Geschossgegner.cs" />
      <Compile Include="Assets\Scripts\Grumpy.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\PunkteManager.cs" />
      <Compile Include="Assets\Scripts\scrollingHintergrund.cs" />
      <Compile Include="Assets\Scripts\Spieler.cs" />
