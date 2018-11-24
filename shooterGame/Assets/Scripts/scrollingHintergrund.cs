@@ -14,7 +14,7 @@ public class scrollingHintergrund : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float newPos = Mathf.Repeat (Time.time * scrollSpeed, 17.64f);
+		float newPos = Mathf.Repeat (Time.time * scrollSpeed, 17.78f);
 		transform.position = startPos + Vector2.right * newPos;
 	}
 }
