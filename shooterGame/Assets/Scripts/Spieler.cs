@@ -19,6 +19,9 @@ public class Spieler : MonoBehaviour {
 	public Text zeitAnzeige;
 	public Text infoAnzeige;
 
+	public DeathMenu deathMenuScreen;
+	public WinMenu winMenuScreen;
+
 	void start ()
 	{
 		zeitStart = Time.time;
@@ -31,8 +34,8 @@ public class Spieler : MonoBehaviour {
 	{
 		float yEingabe = Input.GetAxis("Vertical");
 		float yNeu = transform.position.y + yEingabe * eingabeFaktor * Time.deltaTime;
-		if (yNeu > 4.75f)       yNeu = 4.75f;
-		else if (yNeu < -4.75f) yNeu = -4.75f;
+		if (yNeu > 4.25f)       yNeu = 4.25f;
+		else if (yNeu < -4.25f) yNeu = -4.25f;
 		transform.position = new Vector3(transform.position.x, yNeu, 0);
 
 		// die statische Methode GetButtonDown() der Klasse Input liefert ob die virtuelle 'fire' taste gedrueckt ist
@@ -54,13 +57,13 @@ public class Spieler : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Gefahr")
 		{
-			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.75f, 4.75f), 0);
+			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
 			EnergieAnzeige (-1);
 		}
 		else if (coll.gameObject.tag == "Gewinn")
 		{
-			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.75f, 4.75f), 0);
+			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
 			EnergieAnzeige (1);
 		}
@@ -78,8 +81,23 @@ public class Spieler : MonoBehaviour {
 
 	void EndeSpiel(string tx)
 	{
-		spielGestartet = false;
+
+		if (energie > 40)
+		{
+			spielGestartet = false;
+			infoAnzeige.text = "Sie haben " + tx;
+			winMenuScreen.gameObject.SetActive(true);
+		}
+		else if (energie < 1)
+		{
+			spielGestartet = false;
+			infoAnzeige.text = "Sie haben " + tx;
+			deathMenuScreen.gameObject.SetActive(true);
+		}
+		
+		/* spielGestartet = false;
 		infoAnzeige.text = "Sie haben " + tx;
+		deathMenuScreen.gameObject.SetActive(true); */
 
 		for (int i = 0; i < 3; i++)
 		{

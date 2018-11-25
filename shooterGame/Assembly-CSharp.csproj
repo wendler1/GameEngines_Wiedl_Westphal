@@ -53,14 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DeathMenu.cs" />
      <Compile Include="Assets\Scripts\GefahrGewinn.cs" />
      <Compile Include="Assets\Scripts\Geschoss.cs" />
-     <Compile Include="Assets\Scripts\Geschossgegner.cs" />
-     <Compile Include="Assets\Scripts\Grumpy.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
-     <Compile Include="Assets\Scripts\PunkteManager.cs" />
      <Compile Include="Assets\Scripts\scrollingHintergrund.cs" />
      <Compile Include="Assets\Scripts\Spieler.cs" />
+     <Compile Include="Assets\Scripts\WinMenu.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/Unity/GameEngines_Wiedl_Westphal/shooterGame/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
