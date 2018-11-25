@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour {
+public class WinMenu : MonoBehaviour {
 
+	public string mainMenuLevel;
 	public string starteScene0;
 
-	public void playGame () {
+	public void neustartSpiel () 
+	{
 		// Application.LoadLevel(starteScene0);
 		SceneManager.LoadScene(starteScene0);
 	}
-
-	public void endGame () {
-		Application.Quit();
+	
+	public void returnHome () 
+	{
+		// Application.LoadLevel(mainMenuLevel);
+		SceneManager.LoadScene(mainMenuLevel);
 	}
 }
+
