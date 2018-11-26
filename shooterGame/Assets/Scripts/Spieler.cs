@@ -22,13 +22,16 @@ public class Spieler : MonoBehaviour {
 	public DeathMenu deathMenuScreen;
 	public WinMenu winMenuScreen;
 
+
+
+
 	void start ()
 	{
 		zeitStart = Time.time;
 	}
 
 
-	// die Betaetigung der Tasten 'oben' und 'unten' fuehrt zu einer Bewegung des Spielers in Y-Richtung. -4.75f und 4.75f
+	// die Betaetigung der Tasten 'oben' und 'unten' fuehrt zu einer Bewegung des Spielers in Y-Richtung. -4.25f und 4.25f
 	// ist die Bereichabgrenzung des Spielers
 	void Update()
 	{
@@ -37,6 +40,7 @@ public class Spieler : MonoBehaviour {
 		if (yNeu > 4.25f)       yNeu = 4.25f;
 		else if (yNeu < -4.25f) yNeu = -4.25f;
 		transform.position = new Vector3(transform.position.x, yNeu, 0);
+
 
 		// die statische Methode GetButtonDown() der Klasse Input liefert ob die virtuelle 'fire' taste gedrueckt ist
 		if (Input.GetButtonDown ("Fire1"))
