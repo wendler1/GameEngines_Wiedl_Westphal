@@ -44,16 +44,13 @@ public class Spieler : MonoBehaviour {
 
 		// die statische Methode GetButtonDown() der Klasse Input liefert ob die virtuelle 'fire' taste gedrueckt ist
 		if (Input.GetButtonDown ("Fire1"))
-			for(int i=0; i<3; i++)
-				if (!geschoss[i].activeSelf)
-				{
-					geschoss[i].transform.position = new Vector3(transform.position.x + 0.7f, transform.position.y, 0);
-					geschoss[i].SetActive (true);
-					break;
-				}
+		{
+			Shoot();
+		}
 		if(spielGestartet)
 			zeitAnzeige.text = string.Format("Zeit: {0,6:0.0} sec.", Time.time - zeitStart);		
 	}
+
 
 	// getroffenes Objekt wird als neues Objekt an eine zufaellige Startposition gesetzt und die Geschwindigkeit erhoeht
 	// sich um 1%
@@ -83,6 +80,18 @@ public class Spieler : MonoBehaviour {
 			EndeSpiel ("verloren");
 	}
 
+	public void Shoot () 
+	{
+		// die statische Methode GetButtonDown() der Klasse Input liefert ob die virtuelle 'fire' taste gedrueckt ist
+		for(int i=0; i<3; i++)
+			if (!geschoss[i].activeSelf)
+			{
+				geschoss[i].transform.position = new Vector3(transform.position.x + 0.7f, transform.position.y, 0);
+				geschoss[i].SetActive (true);
+				break;
+			} 
+	} 
+
 	void EndeSpiel(string tx)
 	{
 
@@ -103,11 +112,11 @@ public class Spieler : MonoBehaviour {
 		infoAnzeige.text = "Sie haben " + tx;
 		deathMenuScreen.gameObject.SetActive(true); */
 
-		for (int i = 0; i < 3; i++)
+	    for (int i = 0; i < 3; i++)
 		{
 			geschoss [i].SetActive (false);
 			gefahr [i].SetActive (false);
-		}
+		} 
 		gewinn.SetActive (false);
 	}
 }
