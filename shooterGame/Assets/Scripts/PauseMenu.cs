@@ -21,7 +21,6 @@ public class PauseMenu : MonoBehaviour {
 		{
 			gefahr[i].SetActive(false);
 		}
-
 		gewinn.SetActive(false);
 		
 	}

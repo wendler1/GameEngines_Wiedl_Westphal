@@ -8,6 +8,8 @@ public class Geschoss : MonoBehaviour {
 	public GefahrGewinn	gefahrGewinnKlasse;
 	public GameObject explosionRot;
 	public GameObject explosionGruen;
+	public AudioClip explosionRotAudio;
+	public AudioClip explosionGruenAudio;
 
 	// hier wird ein Geschoss gleichzeitig nach rechts bewegt, hat es die Position 7.5 erreicht wird es deaktiviert und an die 
 	// Ausgangsposition auserhalb des sichtbaren Bereichs zurueckgesetzt
@@ -25,6 +27,7 @@ public class Geschoss : MonoBehaviour {
 		if (coll.gameObject.tag == "Gefahr") 
 		{
 			Instantiate(explosionRot, transform.position, Quaternion.identity);
+			AudioSource.PlayClipAtPoint(explosionRotAudio, transform.position);
 			spielerKlasse.EnergieAnzeige (1);
 
 			transform.position = new Vector3 (-9.5f, 0, 0); // erzeugt neues Geschoss
@@ -35,6 +38,7 @@ public class Geschoss : MonoBehaviour {
 		else if (coll.gameObject.tag == "Gewinn")
 		{
 			Instantiate(explosionGruen, transform.position, Quaternion.identity);
+			AudioSource.PlayClipAtPoint(explosionGruenAudio, transform.position);
 			spielerKlasse.EnergieAnzeige (-1);
 
 			transform.position = new Vector3 (-9.5f, 0, 0); // erzeugt neues Geschoss
