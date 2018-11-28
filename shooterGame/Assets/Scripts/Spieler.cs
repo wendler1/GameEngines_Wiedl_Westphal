@@ -22,12 +22,16 @@ public class Spieler : MonoBehaviour {
 	public DeathMenu deathMenuScreen;
 	public WinMenu winMenuScreen;
 
-
-
+	public AudioClip kollisionGruenAudio;
+	public AudioClip kollisionRotAudio;
+	public AudioClip geschossAudio;
+	public AudioClip gewonnenAudio;
+	public AudioClip verlorenAudio;
 
 	void start ()
 	{
 		zeitStart = Time.time;
+		
 	}
 
 
@@ -60,12 +64,14 @@ public class Spieler : MonoBehaviour {
 		{
 			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
 			EnergieAnzeige (-1);
 		}
 		else if (coll.gameObject.tag == "Gewinn")
 		{
 			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 			EnergieAnzeige (1);
 		}
 	}
@@ -75,9 +81,9 @@ public class Spieler : MonoBehaviour {
 		energie += wert;
 		balkenWert.transform.localScale = new Vector3 (energie / 2.0f, 0.8f, 0);
 		if (energie > 40)
-			EndeSpiel ("gewonnen");
+			EndeSpiel ("gewonnen", gewonnenAudio);
 		else if (energie < 1)
-			EndeSpiel ("verloren");
+			EndeSpiel ("verloren", verlorenAudio);
 	}
 
 	public void Shoot () 
@@ -88,23 +94,26 @@ public class Spieler : MonoBehaviour {
 			{
 				geschoss[i].transform.position = new Vector3(transform.position.x + 0.7f, transform.position.y, 0);
 				geschoss[i].SetActive (true);
+				AudioSource.PlayClipAtPoint(geschossAudio, transform.position);
 				break;
 			} 
 	} 
 
-	void EndeSpiel(string tx)
+	void EndeSpiel(string tx, AudioClip endeTon)
 	{
 
 		if (energie > 40)
 		{
 			spielGestartet = false;
 			infoAnzeige.text = "Sie haben " + tx;
+			AudioSource.PlayClipAtPoint(endeTon, transform.position);
 			winMenuScreen.gameObject.SetActive(true);
 		}
 		else if (energie < 1)
 		{
 			spielGestartet = false;
 			infoAnzeige.text = "Sie haben " + tx;
+			AudioSource.PlayClipAtPoint(endeTon, transform.position);
 			deathMenuScreen.gameObject.SetActive(true);
 		}
 		
@@ -118,5 +127,7 @@ public class Spieler : MonoBehaviour {
 			gefahr [i].SetActive (false);
 		} 
 		gewinn.SetActive (false);
+
+		
 	}
 }
