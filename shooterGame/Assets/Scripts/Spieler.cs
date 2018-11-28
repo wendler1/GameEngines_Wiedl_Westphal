@@ -28,13 +28,10 @@ public class Spieler : MonoBehaviour {
 	public AudioClip gewonnenAudio;
 	public AudioClip verlorenAudio;
 
-
-
-
-
 	void start ()
 	{
 		zeitStart = Time.time;
+		
 	}
 
 

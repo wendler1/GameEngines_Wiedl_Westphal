@@ -7,12 +7,12 @@ public class MoveScript : MonoBehaviour {
 
 	float directionX;
 	public float moveSpeed = 15f;
-	Rigidbody2D rb;
+	//Rigidbody2D rb;
 	float eingabeFaktor = 10;
 	
 	// Use this for initialization
 	void Start () {
-		rb = GetComponent<Rigidbody2D> ();
+		//rb = GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
