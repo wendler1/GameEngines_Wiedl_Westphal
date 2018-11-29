@@ -14,7 +14,7 @@ public class Spieler : MonoBehaviour {
 
 	public GameObject[] gefahr = new GameObject[3];
 	public GameObject gewinn;
-	float zeitStart;
+	public float zeitStart;
 	bool spielGestartet = true;
 	public Text zeitAnzeige;
 	public Text infoAnzeige;
@@ -28,16 +28,18 @@ public class Spieler : MonoBehaviour {
 	public AudioClip gewonnenAudio;
 	public AudioClip verlorenAudio;
 
-	void start ()
+
+	// timeSinceLevelLoad das nach jedem neuen sceneload der timer sich auf null zurück setzt
+	public void start ()
 	{
-		zeitStart = Time.time;
+		zeitStart = Time.timeSinceLevelLoad;
 		
 	}
 
 
 	// die Betaetigung der Tasten 'oben' und 'unten' fuehrt zu einer Bewegung des Spielers in Y-Richtung. -4.25f und 4.25f
 	// ist die Bereichabgrenzung des Spielers
-	void Update()
+	public void Update()
 	{
 		float yEingabe = Input.GetAxis("Vertical");
 		float yNeu = transform.position.y + yEingabe * eingabeFaktor * Time.deltaTime;
@@ -52,7 +54,7 @@ public class Spieler : MonoBehaviour {
 			Shoot();
 		}
 		if(spielGestartet)
-			zeitAnzeige.text = string.Format("Zeit: {0,6:0.0} sec.", Time.time - zeitStart);		
+			zeitAnzeige.text = string.Format("Zeit: {0,6:0.0} sec.", Time.timeSinceLevelLoad - zeitStart);		
 	}
 
 
@@ -127,7 +129,6 @@ public class Spieler : MonoBehaviour {
 			gefahr [i].SetActive (false);
 		} 
 		gewinn.SetActive (false);
-
-		
 	}
+ 
 }
