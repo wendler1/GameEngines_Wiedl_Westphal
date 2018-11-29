@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour {
 
@@ -10,9 +11,10 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject MenuPause;
 	public GameObject[] gefahr = new GameObject[3];
 	public GameObject gewinn;
-	
-	
 
+	
+	
+	
 	public void PauseGame () 
 	{
 		Time.timeScale = 0f;
@@ -41,14 +43,12 @@ public class PauseMenu : MonoBehaviour {
 	{
 		Time.timeScale = 1f;
 		MenuPause.SetActive(false);
-		// Application.LoadLevel(starteScene0);
 		SceneManager.LoadScene(starteScene0);
 	}
 	
 	public void returnHome () 
 	{
 		Time.timeScale = 1f;
-		// Application.LoadLevel(mainMenuLevel);
 		SceneManager.LoadScene(mainMenuLevel);
 	}
 }
