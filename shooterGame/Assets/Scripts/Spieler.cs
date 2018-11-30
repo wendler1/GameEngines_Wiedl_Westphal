@@ -28,12 +28,15 @@ public class Spieler : MonoBehaviour {
 	public AudioClip gewonnenAudio;
 	public AudioClip verlorenAudio;
 
+	//public ScoreManager theScoreManager;
+
 
 	// timeSinceLevelLoad das nach jedem neuen sceneload der timer sich auf null zurück setzt
 	public void start ()
 	{
 		zeitStart = Time.timeSinceLevelLoad;
-		
+
+		//theScoreManager = FindObjectOfType<ScoreManager>(); // zugriff auf die ScoreManager Klasse
 	}
 
 
@@ -129,6 +132,9 @@ public class Spieler : MonoBehaviour {
 			gefahr [i].SetActive (false);
 		} 
 		gewinn.SetActive (false);
+		
+		//theScoreManager.scoreIncreasing = false;
+	
 	}
  
 }
