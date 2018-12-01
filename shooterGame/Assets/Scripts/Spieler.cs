@@ -9,11 +9,16 @@ public class Spieler : MonoBehaviour {
 	public GameObject[] geschoss = new GameObject[3];
 	
 	public GefahrGewinn gefahrGewinnKlasse;
+
+	public GrumpyGefahr grumpyGefahrKlasse;
+
 	int energie = 10;
 	public GameObject balkenWert;
 
 	public GameObject[] gefahr = new GameObject[3];
 	public GameObject gewinn;
+	public GameObject grumpyGefahr;
+
 	public float zeitStart;
 	bool spielGestartet = true;
 	public Text zeitAnzeige;
@@ -28,7 +33,8 @@ public class Spieler : MonoBehaviour {
 	public AudioClip gewonnenAudio;
 	public AudioClip verlorenAudio;
 
-	//public ScoreManager theScoreManager;
+	// public ScoreManager theScoreManager;
+	
 
 
 	// timeSinceLevelLoad das nach jedem neuen sceneload der timer sich auf null zurück setzt
@@ -36,7 +42,7 @@ public class Spieler : MonoBehaviour {
 	{
 		zeitStart = Time.timeSinceLevelLoad;
 
-		//theScoreManager = FindObjectOfType<ScoreManager>(); // zugriff auf die ScoreManager Klasse
+		// theScoreManager = FindObjectOfType<ScoreManager>(); // zugriff auf die ScoreManager Klasse
 	}
 
 
@@ -78,6 +84,13 @@ public class Spieler : MonoBehaviour {
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
 			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 			EnergieAnzeige (1);
+		}
+		if (coll.gameObject.tag == "GrumpyGefahr")
+		{
+			coll.gameObject.transform.position = new Vector3 (Random.Range(59.5f, 69.0f), Random.Range(-4.25f, 4.25f), 0);
+			grumpyGefahrKlasse.xAenderungBasis *= 2.01f;
+			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
+			EnergieAnzeige (-1);
 		}
 	}
 	

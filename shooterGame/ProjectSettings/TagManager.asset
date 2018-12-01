@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gefahr
   - Gewinn
+  - GrumpyGefahr
   layers:
   - Default
   - TransparentFX
