@@ -13,7 +13,6 @@ public class ScoreManager : MonoBehaviour {
 
 	public float pointsPerSecond;
 	public bool scoreIncreasing;
-
 	
 	void Start () 
 	{
@@ -30,6 +29,7 @@ public class ScoreManager : MonoBehaviour {
 		{
 			scoreCount += pointsPerSecond * Time.deltaTime;
 		}
+	
 		if (scoreCount > highscoreCount)
 		{
 			highscoreCount = scoreCount;
@@ -37,5 +37,5 @@ public class ScoreManager : MonoBehaviour {
 		}
 		scoreText.text = "Score: " + Mathf.Round(scoreCount);
 		highscoreText.text = "Highscore: " + Mathf.Round(highscoreCount);
-	}
+	} 
 }
