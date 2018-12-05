@@ -33,7 +33,7 @@ public class Spieler : MonoBehaviour {
 	public AudioClip gewonnenAudio;
 	public AudioClip verlorenAudio;
 
-	// public ScoreManager theScoreManager;
+	public ScoreManager theScoreManager;
 	
 
 
@@ -42,7 +42,7 @@ public class Spieler : MonoBehaviour {
 	{
 		zeitStart = Time.timeSinceLevelLoad;
 
-		// theScoreManager = FindObjectOfType<ScoreManager>(); // zugriff auf die ScoreManager Klasse
+		theScoreManager = FindObjectOfType<ScoreManager>(); // zugriff auf die ScoreManager Klasse
 	}
 
 
@@ -145,8 +145,9 @@ public class Spieler : MonoBehaviour {
 			gefahr [i].SetActive (false);
 		} 
 		gewinn.SetActive (false);
+		grumpyGefahr.SetActive(false);
 		
-		//theScoreManager.scoreIncreasing = false;
+		theScoreManager.scoreIncreasing = false;
 	
 	}
  
