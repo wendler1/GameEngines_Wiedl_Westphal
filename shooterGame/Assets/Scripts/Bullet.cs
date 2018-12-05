@@ -9,6 +9,7 @@ public class Bullet : MonoBehaviour {
 
 	public Spieler target;
 	Vector2 moveDirection;
+	public AudioClip kollisionRotAudio;
 
 	
 	void Start () 
@@ -30,6 +31,7 @@ public class Bullet : MonoBehaviour {
 			Debug.Log ("Hit");
 			Destroy (gameObject);
 			target.EnergieAnzeige(-1);
+			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
 		}
 	}
 

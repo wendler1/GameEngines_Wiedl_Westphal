@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  kollisionRotAudio: {fileID: 8300000, guid: feb1a527b068c8c48b1ebbf018a23258, type: 3}
 --- !u!212 &212040343660308766
 SpriteRenderer:
   m_ObjectHideFlags: 1

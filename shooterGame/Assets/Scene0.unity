@@ -1102,6 +1102,7 @@ MonoBehaviour:
   geschossAudio: {fileID: 8300000, guid: e1725331e57bad64f9c5d4052214fb36, type: 3}
   gewonnenAudio: {fileID: 8300000, guid: 07efcd43b2de374418d71489c5f78af7, type: 3}
   verlorenAudio: {fileID: 8300000, guid: c5546fa00d0f8e24a8f48fbb11a3fb8f, type: 3}
+  theScoreManager: {fileID: 2097900209}
 --- !u!114 &307585720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1556,7 +1557,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 492906058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.3, y: 2, z: 0}
+  m_LocalPosition: {x: 4, y: 1.5, z: 0}
   m_LocalScale: {x: 0.358, y: 0.335, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

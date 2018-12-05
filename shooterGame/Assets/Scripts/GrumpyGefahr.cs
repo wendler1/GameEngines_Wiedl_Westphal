@@ -15,8 +15,8 @@ public class GrumpyGefahr : MonoBehaviour {
 	// Gegner und Freunde erhalten eine individuelle Geschwindigkeit, die sich im Durchschnitt langsam steigert.
 	void Start ()
 	{
-		xAenderungBasis = 5.5f * Time.deltaTime;
-		xAenderung = 5.5f * Time.deltaTime;
+		xAenderungBasis = 2.5f * Time.deltaTime;
+		xAenderung = 2.5f * Time.deltaTime;
 		fireRate = 4f;
 		nextFire = Time.time;
 	}
