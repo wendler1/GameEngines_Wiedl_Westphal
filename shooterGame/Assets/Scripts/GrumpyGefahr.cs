@@ -29,12 +29,12 @@ public class GrumpyGefahr : MonoBehaviour {
 		transform.position = new Vector3 (transform.position.x - xAenderung, transform.position.y, 0);
 		// Falls ein Objekt den sichtbaren Bereich nach links verlassen hat, erscheint es als ein neues, schnelleres 
 		// Objekt von einer neuen Startposition 
-		if (transform.position.x < -59.5f)
+		if (transform.position.x < -9.5f)
 		{
 			transform.position = new Vector3 (Random.Range(59.5f, 69.0f), Random.Range(-4.75f, 4.75f), 0);
 			xAenderungBasis *= 1.01f;
 			xAenderung = xAenderungBasis * Random.Range(0.7f, 1.3f);
-			if (gameObject.tag == "Gefahr")
+			if (gameObject.tag == "GrumpyGefahr")
 				spielerKlasse.EnergieAnzeige (-1);
 		}
 	}
