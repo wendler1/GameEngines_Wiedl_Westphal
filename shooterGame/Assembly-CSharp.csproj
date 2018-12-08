@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\Geschoss.cs" />
      <Compile Include="Assets\Scripts\GrumpyGefahr.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MoneyEnemyPickUp.cs" />
      <Compile Include="Assets\Scripts\MoneyManager.cs" />
      <Compile Include="Assets\Scripts\MoneyPickUp.cs" />
      <Compile Include="Assets\Scripts\MoveScript.cs" />

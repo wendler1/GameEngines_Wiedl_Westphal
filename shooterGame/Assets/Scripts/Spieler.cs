@@ -12,6 +12,7 @@ public class Spieler : MonoBehaviour {
 
 	public GrumpyGefahr grumpyGefahrKlasse;
 	public MoneyPickUp moneyPickUpKlassse;
+	public MoneyEnemyPickUp moneyEnemyPickUpKlasse;
 
 	int energie = 10;
 	public GameObject balkenWert;
@@ -20,6 +21,7 @@ public class Spieler : MonoBehaviour {
 	public GameObject gewinn;
 	public GameObject grumpyGefahr;
 	public GameObject coin;
+	public GameObject coinShine;
 
 	public float zeitStart;
 	bool spielGestartet = true;
@@ -100,6 +102,13 @@ public class Spieler : MonoBehaviour {
 			moneyPickUpKlassse.xAenderungBasis *= 1.01f;
 			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 		}
+		if (coll.gameObject.tag == "CoinShine")
+		{
+			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
+			moneyPickUpKlassse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
+		}
+
 	}
 	
 	public void EnergieAnzeige(int wert)
