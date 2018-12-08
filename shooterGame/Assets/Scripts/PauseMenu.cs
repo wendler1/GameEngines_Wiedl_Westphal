@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject MenuPause;
 	public GameObject[] gefahr = new GameObject[3];
 	public GameObject gewinn;
+	public GameObject grumpyGefahr;
 
 	
 	
@@ -24,6 +25,7 @@ public class PauseMenu : MonoBehaviour {
 			gefahr[i].SetActive(false);
 		}
 		gewinn.SetActive(false);
+		grumpyGefahr.SetActive(false);
 		
 	}
 
@@ -36,6 +38,7 @@ public class PauseMenu : MonoBehaviour {
 			gefahr[i].SetActive(true);
 		}
 		gewinn.SetActive(true);
+		grumpyGefahr.SetActive(true);
 		
 	}
 

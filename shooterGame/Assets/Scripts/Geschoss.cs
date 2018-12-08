@@ -56,7 +56,7 @@ public class Geschoss : MonoBehaviour {
 			transform.position = new Vector3 (-9.5f, 0, 0); // erzeugt neues Geschoss
 			gameObject.SetActive(false);
 			coll.gameObject.transform.position = new Vector3 (Random.Range(59.5f, 69.0f), Random.Range(-4.7f, 4.75f), 0); // erzeugt neues von rechts kommendes Objekt
-			grumpyGefahrKlasse.xAenderungBasis *= 2.01f; // erhoeht die Basis der zufaelligen Geschwindigkeitsaenderung um 1%
+			grumpyGefahrKlasse.xAenderungBasis *= 1.01f; // erhoeht die Basis der zufaelligen Geschwindigkeitsaenderung um 1%
 		}
 
 	}

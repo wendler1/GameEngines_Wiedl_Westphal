@@ -11,6 +11,7 @@ public class Spieler : MonoBehaviour {
 	public GefahrGewinn gefahrGewinnKlasse;
 
 	public GrumpyGefahr grumpyGefahrKlasse;
+	public MoneyPickUp moneyPickUpKlassse;
 
 	int energie = 10;
 	public GameObject balkenWert;
@@ -18,6 +19,7 @@ public class Spieler : MonoBehaviour {
 	public GameObject[] gefahr = new GameObject[3];
 	public GameObject gewinn;
 	public GameObject grumpyGefahr;
+	public GameObject coin;
 
 	public float zeitStart;
 	bool spielGestartet = true;
@@ -88,9 +90,15 @@ public class Spieler : MonoBehaviour {
 		if (coll.gameObject.tag == "GrumpyGefahr")
 		{
 			coll.gameObject.transform.position = new Vector3 (Random.Range(59.5f, 69.0f), Random.Range(-4.25f, 4.25f), 0);
-			grumpyGefahrKlasse.xAenderungBasis *= 2.01f;
+			grumpyGefahrKlasse.xAenderungBasis *= 1.01f;
 			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
 			EnergieAnzeige (-1);
+		}
+		if (coll.gameObject.tag == "Coin")
+		{
+			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
+			moneyPickUpKlassse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 		}
 	}
 	
@@ -148,6 +156,7 @@ public class Spieler : MonoBehaviour {
 		grumpyGefahr.SetActive(false);
 		
 		theScoreManager.scoreIncreasing = false;
+		coin.SetActive(false);
 	
 	}
  
