@@ -7,6 +7,8 @@ public class MoneyEnemyPickUp : MonoBehaviour {
 	public float xAenderungBasis;
 	float xAenderung;
 
+	
+
 	void Start () 
 	{
 		xAenderungBasis = 2.5f * Time.deltaTime;

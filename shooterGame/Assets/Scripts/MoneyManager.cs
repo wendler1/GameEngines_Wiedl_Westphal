@@ -16,6 +16,4 @@ public class MoneyManager : MonoBehaviour {
 	{
 		MoneyAnzeige.text = "$: " + coinAmount.ToString();
 	}
-
-	
 }

@@ -26,7 +26,10 @@ public class MoneyPickUp : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D coll) 
 	{
-		MoneyManager.coinAmount += 1;    // ladet das Script MoneyManager
+		if (coll.gameObject.tag == "Player")
+		{
+			MoneyManager.coinAmount += 1;    // ladet das Script MoneyManager
+		}
 	}
 
 }

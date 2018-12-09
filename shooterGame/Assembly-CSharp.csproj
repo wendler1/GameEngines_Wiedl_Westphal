@@ -64,6 +64,8 @@
      <Compile Include="Assets\Scripts\MoneyPickUp.cs" />
      <Compile Include="Assets\Scripts\MoveScript.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PowerUp.cs" />
+     <Compile Include="Assets\Scripts\PowerUpManager.cs" />
      <Compile Include="Assets\Scripts\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\scrollingHintergrund.cs" />
      <Compile Include="Assets\Scripts\Spieler.cs" />
