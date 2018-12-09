@@ -39,6 +39,8 @@ public class Spieler : MonoBehaviour {
 
 	public ScoreManager theScoreManager;
 	
+	public GameObject buttonPause;
+	
 
 
 	// timeSinceLevelLoad das nach jedem neuen sceneload der timer sich auf null zurück setzt
@@ -165,6 +167,7 @@ public class Spieler : MonoBehaviour {
 		grumpyGefahr.SetActive(false);
 		
 		theScoreManager.scoreIncreasing = false;
+		buttonPause.SetActive(false);
 		coin.SetActive(false);
 	
 	}
