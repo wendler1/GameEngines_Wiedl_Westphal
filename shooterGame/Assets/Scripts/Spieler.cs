@@ -14,7 +14,7 @@ public class Spieler : MonoBehaviour {
 	public MoneyPickUp moneyPickUpKlassse;
 	public MoneyEnemyPickUp moneyEnemyPickUpKlasse;
 
-	int energie = 10;
+	int energie = 3;
 	public GameObject balkenWert;
 
 	public GameObject[] gefahr = new GameObject[3];

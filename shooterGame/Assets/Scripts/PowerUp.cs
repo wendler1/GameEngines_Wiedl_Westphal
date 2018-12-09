@@ -9,6 +9,7 @@ public class PowerUp: MonoBehaviour {
 	public PowerUpManager thePowerUpManager;
 	public float xAenderungBasis;
 	float xAenderung;
+	public AudioClip kollisionGruenAudio;
 
 
 
@@ -30,6 +31,13 @@ public class PowerUp: MonoBehaviour {
 		if (coll.gameObject.tag == "Player")
 		{
 			Debug.Log ("Hit");
+			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
+			thePowerUpManager.ActivatePowerUp(doublePoints, powerUpLength);
+		}
+		if (coll.gameObject.tag == "Geschosse")
+		{
+			Debug.Log ("Hit");
+			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 			thePowerUpManager.ActivatePowerUp(doublePoints, powerUpLength);
 		}
 		gameObject.SetActive(false);
