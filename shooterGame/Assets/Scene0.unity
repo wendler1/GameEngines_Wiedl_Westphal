@@ -775,6 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theScoreManager: {fileID: 2097900209}
+  floatingTextPrefab: {fileID: 1246222970}
 --- !u!4 &105071872
 Transform:
   m_ObjectHideFlags: 0
@@ -2984,6 +2985,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spielerKlasse: {fileID: 307585719}
   xAenderungBasis: 0
+--- !u!1 &1246222970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1246222971}
+  - component: {fileID: 1246222973}
+  - component: {fileID: 1246222972}
+  m_Layer: 5
+  m_Name: PowerUpText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1246222971
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246222970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2133797292}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000005722, y: 10}
+  m_SizeDelta: {x: 517.8, y: 393.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1246222972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246222970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.36862746}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 99
+    m_FontStyle: 3
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 99
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: TRIPLE POINTS DUDE
+--- !u!222 &1246222973
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1246222970}
+  m_CullTransparentMesh: 0
 --- !u!1 &1250661642 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1724836920606346, guid: 51281eaeb10aa4254a656bacbeb08fc7,
@@ -3582,8 +3658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Vertical
   axisValue: 1
-  responseSpeed: 3
-  returnToCentreSpeed: 3
+  responseSpeed: 10
+  returnToCentreSpeed: 10
 --- !u!1001 &1419599659
 Prefab:
   m_ObjectHideFlags: 0
@@ -4059,8 +4135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Vertical
   axisValue: -1
-  responseSpeed: 3
-  returnToCentreSpeed: 3
+  responseSpeed: 10
+  returnToCentreSpeed: 10
 --- !u!114 &1690686781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5264,6 +5340,7 @@ RectTransform:
   - {fileID: 170335555}
   - {fileID: 2097900208}
   - {fileID: 599372442}
+  - {fileID: 1246222971}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5281,7 +5358,7 @@ Animator:
   m_GameObject: {fileID: 2133797288}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1be4834c821454ff8ae1f9a7a27a6928, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
