@@ -7,39 +7,31 @@ public class Spieler : MonoBehaviour {
 
 	float eingabeFaktor = 10;
 	public GameObject[] geschoss = new GameObject[3];
-	
 	public GefahrGewinn gefahrGewinnKlasse;
-
 	public GrumpyGefahr grumpyGefahrKlasse;
 	public MoneyPickUp moneyPickUpKlassse;
 	public MoneyEnemyPickUp moneyEnemyPickUpKlasse;
-
 	int energie = 3;
 	public GameObject balkenWert;
-
 	public GameObject[] gefahr = new GameObject[3];
 	public GameObject gewinn;
 	public GameObject grumpyGefahr;
 	public GameObject coin;
 	public GameObject coinShine;
-
 	public float zeitStart;
 	bool spielGestartet = true;
 	public Text zeitAnzeige;
 	public Text infoAnzeige;
-
 	public DeathMenu deathMenuScreen;
 	public WinMenu winMenuScreen;
-
 	public AudioClip kollisionGruenAudio;
 	public AudioClip kollisionRotAudio;
 	public AudioClip geschossAudio;
 	public AudioClip gewonnenAudio;
 	public AudioClip verlorenAudio;
-
 	public ScoreManager theScoreManager;
-	
 	public GameObject buttonPause;
+
 	
 
 

@@ -7,8 +7,6 @@ public class MoneyEnemyPickUp : MonoBehaviour {
 	public float xAenderungBasis;
 	float xAenderung;
 
-	
-
 	void Start () 
 	{
 		xAenderungBasis = 2.5f * Time.deltaTime;
@@ -29,7 +27,7 @@ public class MoneyEnemyPickUp : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D coll)
 	{
 		if (coll.gameObject.tag == "Player")
-		{
+		{	
 			MoneyManager.coinAmount += 25;    // ladet das Script MoneyManager
 			Destroy(gameObject);
 		}

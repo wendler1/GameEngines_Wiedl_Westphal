@@ -108,6 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e14999497304d05a2cf5a9529d894e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xAenderungBasis: 0
+  floatingTextPrefab: {fileID: 1156483428324946, guid: 43c6a7eab57c34be08dd0f983fdbf1d3,
+    type: 2}
 --- !u!212 &212823874216534568
 SpriteRenderer:
   m_ObjectHideFlags: 1
