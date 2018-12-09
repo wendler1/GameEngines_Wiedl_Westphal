@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 2466712}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.87, y: 5.19, z: 0.062463395}
-  m_LocalScale: {x: 5, y: 1, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 104966290}
   m_RootOrder: 1
@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 31080928}
   m_Layer: 0
   m_Name: Geschoss1
-  m_TagString: Untagged
+  m_TagString: Geschosse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -761,7 +761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &105071871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6108418636a0c4e8c87b6c01c44e4af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theScoreManager: {fileID: 2097900209}
 --- !u!4 &105071872
 Transform:
   m_ObjectHideFlags: 0
@@ -1371,7 +1372,7 @@ GameObject:
   - component: {fileID: 445327776}
   m_Layer: 0
   m_Name: Geschosse
-  m_TagString: Untagged
+  m_TagString: Geschosse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3169,7 +3170,7 @@ GameObject:
   - component: {fileID: 1366929363}
   m_Layer: 0
   m_Name: Geschoss2
-  m_TagString: Untagged
+  m_TagString: Geschosse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3313,7 +3314,7 @@ GameObject:
   - component: {fileID: 1372679883}
   m_Layer: 0
   m_Name: Geschoss0
-  m_TagString: Untagged
+  m_TagString: Geschosse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3818,11 +3819,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4074465215278610, guid: 8ba7b0049308643e3b0da09399badce9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.821
+      value: 7.24
       objectReference: {fileID: 0}
     - target: {fileID: 4074465215278610, guid: 8ba7b0049308643e3b0da09399badce9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.205
+      value: -2.06
       objectReference: {fileID: 0}
     - target: {fileID: 4074465215278610, guid: 8ba7b0049308643e3b0da09399badce9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3847,6 +3848,11 @@ Prefab:
     - target: {fileID: 4074465215278610, guid: 8ba7b0049308643e3b0da09399badce9, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 61368106722808062, guid: 8ba7b0049308643e3b0da09399badce9,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba7b0049308643e3b0da09399badce9, type: 2}
@@ -4739,7 +4745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1984677892
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4818,7 +4824,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984677891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.75, y: -2.01, z: 0}
+  m_LocalPosition: {x: 121.9, y: 2.1, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4835,9 +4841,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9df3c447476448da2d5763e46dd856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doubleMoney: 1
+  doublePoints: 1
   powerUpLength: 10
   thePowerUpManager: {fileID: 105071871}
+  xAenderungBasis: 0
+  kollisionGruenAudio: {fileID: 8300000, guid: a03e955401fcb044f801cfb78c79bfb6, type: 3}
 --- !u!1 &2008731877
 GameObject:
   m_ObjectHideFlags: 0

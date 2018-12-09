@@ -9,6 +9,7 @@ TagManager:
   - GrumpyGefahr
   - Coin
   - CoinShine
+  - Geschosse
   layers:
   - Default
   - TransparentFX
