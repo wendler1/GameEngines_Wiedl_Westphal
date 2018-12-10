@@ -71,14 +71,35 @@ public class Spieler : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Gefahr")
 		{
-			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
+			coll.gameObject.transform.position = new Vector3 (Random.Range(14.5f, 15.0f), Random.Range(-4.25f, 4.25f), 0);
+			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
+			EnergieAnzeige (-1);
+		}
+		if (coll.gameObject.tag == "Gefahr1")
+		{
+			coll.gameObject.transform.position = new Vector3 (Random.Range(17.5f, 11.0f), Random.Range(-4.25f, 4.25f), 0);
+			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
+			EnergieAnzeige (-1);
+		}
+		if (coll.gameObject.tag == "Gefahr2")
+		{
+			coll.gameObject.transform.position = new Vector3 (Random.Range(24f, 28.0f), Random.Range(-4.25f, 4.25f), 0);
+			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
+			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
+			EnergieAnzeige (-1);
+		}
+		if (coll.gameObject.tag == "Gefahr3")
+		{
+			coll.gameObject.transform.position = new Vector3 (Random.Range(14.5f, 15.0f), Random.Range(-4.25f, 4.25f), 0);
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
 			AudioSource.PlayClipAtPoint(kollisionRotAudio, transform.position);
 			EnergieAnzeige (-1);
 		}
 		else if (coll.gameObject.tag == "Gewinn")
 		{
-			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
+			coll.gameObject.transform.position = new Vector3 (Random.Range(10.5f, 13.0f), Random.Range(-4.25f, 4.25f), 0);
 			gefahrGewinnKlasse.xAenderungBasis *= 1.01f;
 			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 			EnergieAnzeige (1);
@@ -92,7 +113,7 @@ public class Spieler : MonoBehaviour {
 		}
 		if (coll.gameObject.tag == "Coin")
 		{
-			coll.gameObject.transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
+			coll.gameObject.transform.position = new Vector3 (Random.Range(20.5f, 18.0f), Random.Range(-4.25f, 4.25f), 0);
 			moneyPickUpKlassse.xAenderungBasis *= 1.01f;
 			AudioSource.PlayClipAtPoint(kollisionGruenAudio, transform.position);
 		}
