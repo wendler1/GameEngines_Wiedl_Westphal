@@ -3661,8 +3661,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Vertical
   axisValue: 1
-  responseSpeed: 6
-  returnToCentreSpeed: 6
+  responseSpeed: 4
+  returnToCentreSpeed: 4
 --- !u!1001 &1419599659
 Prefab:
   m_ObjectHideFlags: 0
@@ -4138,8 +4138,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axisName: Vertical
   axisValue: -1
-  responseSpeed: 6
-  returnToCentreSpeed: 6
+  responseSpeed: 4
+  returnToCentreSpeed: 4
 --- !u!114 &1690686781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4904,7 +4904,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984677891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.8, y: 2.8, z: 0}
+  m_LocalPosition: {x: 97.9, y: 2.6, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
