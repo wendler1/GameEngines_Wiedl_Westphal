@@ -5,7 +5,6 @@ using UnityEngine;
 public class GrumpyGefahr : MonoBehaviour {
 
 	public Spieler spielerKlasse;
-
 	public float xAenderungBasis;
 	float xAenderung;
 	public GameObject bullet;

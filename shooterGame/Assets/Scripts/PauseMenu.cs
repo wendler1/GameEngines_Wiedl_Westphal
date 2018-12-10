@@ -15,8 +15,6 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject coin; 
 	public GameObject powerUp;
 	
-	
-	
 	public void PauseGame () 
 	{
 		Time.timeScale = 0f;
@@ -29,7 +27,6 @@ public class PauseMenu : MonoBehaviour {
 		grumpyGefahr.SetActive(false);
 		coin.SetActive(false);
 		powerUp.SetActive(false);
-		
 	}
 
 	public void ResumeGame () 
@@ -44,7 +41,6 @@ public class PauseMenu : MonoBehaviour {
 		grumpyGefahr.SetActive(true);
 		coin.SetActive(true);
 		powerUp.SetActive(true);
-		
 	}
 
 	public void neustartSpiel () 

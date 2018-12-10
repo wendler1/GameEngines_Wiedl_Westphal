@@ -11,12 +11,10 @@ public class PowerUpManager : MonoBehaviour {
 	private float normalPointsPerSecond;
 	public GameObject floatingTextPrefab; 
 
-	
 	void Start () 
 	{
 		floatingTextPrefab.SetActive(false);
 	}
-	
 	
 	void Update () 
 	{
@@ -37,16 +35,13 @@ public class PowerUpManager : MonoBehaviour {
 				floatingTextPrefab.SetActive(false);
 			}
 		}
-		
 	}
 
 	public void ActivatePowerUp (bool points, float time)
 	{
 		doublePoints = points;
 		powerUpLengthCounter = time;
-
 		normalPointsPerSecond = theScoreManager.pointsPerSecond;
-
 		powerUpActive = true;
 	}
 }
