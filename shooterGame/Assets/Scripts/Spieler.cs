@@ -64,7 +64,6 @@ public class Spieler : MonoBehaviour {
 			zeitAnzeige.text = string.Format("Zeit: {0,6:0.0} sec.", Time.timeSinceLevelLoad - zeitStart);		
 	}
 
-
 	// getroffenes Objekt wird als neues Objekt an eine zufaellige Startposition gesetzt und die Geschwindigkeit erhoeht
 	// sich um 1%
 	void OnTriggerEnter2D(Collider2D coll)

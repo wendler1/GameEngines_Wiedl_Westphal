@@ -11,9 +11,6 @@ public class PowerUp: MonoBehaviour {
 	float xAenderung;
 	public AudioClip kollisionGruenAudio;
 
-
-
-
 	void Start () 
 	{
 		xAenderungBasis = 2.5f * Time.deltaTime;
