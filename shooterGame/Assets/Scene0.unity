@@ -985,7 +985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1724836920606346, guid: 51281eaeb10aa4254a656bacbeb08fc7, type: 2}
       propertyPath: m_TagString
-      value: Gefahr
+      value: Gefahr3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281eaeb10aa4254a656bacbeb08fc7, type: 2}
@@ -3156,7 +3156,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1724836920606346, guid: 51281eaeb10aa4254a656bacbeb08fc7, type: 2}
       propertyPath: m_TagString
-      value: Gefahr
+      value: Gefahr1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281eaeb10aa4254a656bacbeb08fc7, type: 2}
@@ -3708,7 +3708,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1724836920606346, guid: 51281eaeb10aa4254a656bacbeb08fc7, type: 2}
       propertyPath: m_TagString
-      value: Gefahr
+      value: Gefahr2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51281eaeb10aa4254a656bacbeb08fc7, type: 2}

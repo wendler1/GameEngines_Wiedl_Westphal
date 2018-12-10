@@ -27,7 +27,7 @@ public class Geschoss : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
-		if (coll.gameObject.tag == "Gefahr") 
+		if (coll.gameObject.tag == "Gefahr"  || coll.gameObject.tag == "Gefahr1" || coll.gameObject.tag == "Gefahr2" || coll.gameObject.tag == "Gefahr3") 
 		{
 			Instantiate(explosionRot, transform.position, Quaternion.identity);
 			AudioSource.PlayClipAtPoint(explosionRotAudio, transform.position);

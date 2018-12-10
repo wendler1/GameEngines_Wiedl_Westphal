@@ -25,10 +25,10 @@ public class GefahrGewinn : MonoBehaviour {
 		// Objekt von einer neuen Startposition 
 		if (transform.position.x < -9.5f)
 		{
-			transform.position = new Vector3 (Random.Range(9.5f, 19.0f), Random.Range(-4.25f, 4.25f), 0);
+			transform.position = new Vector3 (Random.Range(12.5f, 22.0f), Random.Range(-4.25f, 4.25f), 0);
 			xAenderungBasis *= 1.01f;
 			xAenderung = xAenderungBasis * Random.Range(0.7f, 1.3f);
-			if (gameObject.tag == "Gefahr")
+			if (gameObject.tag == "Gefahr" || gameObject.tag == "Gefahr1" || gameObject.tag == "Gefahr2" || gameObject.tag == "Gefahr3")
 				spielerKlasse.EnergieAnzeige (-1);
 		}
 	}

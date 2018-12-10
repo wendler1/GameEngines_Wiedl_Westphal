@@ -10,6 +10,9 @@ TagManager:
   - Coin
   - CoinShine
   - Geschosse
+  - Gefahr1
+  - Gefahr2
+  - Gefahr3
   layers:
   - Default
   - TransparentFX
